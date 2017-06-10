@@ -12,6 +12,7 @@
           <ul class="nav nav-pills pull-right">
             {{#if user}}
               <li role="presentation"><a href="/">Dashboard</a></li>
+							<li role="presentation"><a href="/newtask">Newtask</a></li>
               <li role="presentation"><a href="/users/logout">Logout</a></li>
             {{else}}
 						  <li role="presentation"><a href="/users/home">Home</a></li>
@@ -38,7 +39,7 @@
           {{/if}}
 
           {{{body}}}
-					
+
         </div>
       </div>
       <footer class="footer">

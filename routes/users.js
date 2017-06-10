@@ -39,6 +39,7 @@ router.post('/register', function(req, res){
 	var errors = req.validationErrors();
 
 	if(errors){
+		req.flash('error_msg', 'Description cannot be null');
 		res.render('register',{
 			errors:errors
 		});

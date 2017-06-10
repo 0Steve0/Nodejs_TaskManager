@@ -12,7 +12,7 @@ var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
 //connect to mongodb: loginapp
-var url = 'mongodb://localhost/loginapp';
+var url = 'mongodb://localhost/nodejs_taskmanager';
 mongoose.connect(url, function(err) {
     if(err) {
         console.log('connection error: ', err);
@@ -81,8 +81,6 @@ app.use(function (req, res, next) {
   res.locals.user = req.user || null;
   next();
 });
-
-
 
 app.use('/', routes);
 app.use('/users', users);
